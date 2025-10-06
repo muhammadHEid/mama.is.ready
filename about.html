@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mama is Ready - Nurse Aml Abu Attaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* --- Global Styles & Variables (Copied from index.html for consistency) --- */
+        :root {
+            --primary-color: #000000; /* Black from logo */
+            --secondary-color: #F7E5E9; /* Soft pink from logo background */
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --background-light: #F9F7F5; /* A very light, almost white background */
+            --font-heading: 'Great Vibes', cursive;
+            --font-body: 'Lato', sans-serif;
+            --font-subheading: 'Playfair Display', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-subheading);
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-family: var(--font-body);
+        }
+
+        .btn:hover {
+            background-color: #333333;
+        }
+
+        /* --- Header & Navigation (Copied for consistency) --- */
+        .header {
+            padding: 0.75rem 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 70px; /* Consistent logo size */
+            width: auto;
+        }
+        
+        .nav a {
+            margin: 0 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .nav-icons a {
+            margin-left: 1rem;
+        }
+        
+        .lang-switcher {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* --- About Page Specific Styles --- */
+        .about-hero {
+            background-color: var(--secondary-color); /* Soft pink background */
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-content {
+            padding: 4rem 0;
+            display: flex;
+            flex-direction: column; /* Default to column on smaller screens */
+            align-items: center;
+            gap: 3rem;
+            text-align: center; /* Center text by default */
+        }
+
+        .about-image {
+            flex-basis: 40%;
+            max-width: 300px; /* Limit image size */
+            border-radius: 50%; /* Make image round */
+            overflow: hidden; /* Ensure roundness */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            display: block; /* Remove extra space below image */
+            width: 100%;
+            height: auto;
+        }
+
+        .about-text {
+            flex-basis: 60%;
+            max-width: 700px; /* Limit text width */
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            text-align: center; /* Center heading */
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        /* --- Footer (Copied for consistency) --- */
+        .footer {
+            background: var(--primary-color);
+            color: #ccc;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 1rem;
+        }
+        
+        .footer .social-links a {
+            margin: 0 0.5rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        /* --- Responsive Design --- */
+        @media (min-width: 768px) {
+            .about-content {
+                flex-direction: row; /* Row layout on larger screens */
+                text-align: left; /* Align text left on larger screens */
+            }
+            .about-image {
+                margin-right: 3rem; /* Space between image and text */
+            }
+            .about-text h2 {
+                text-align: left; /* Align heading left on larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="pics/logo.jpg" alt="Mama is Ready Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#">Learn</a>
+                <a href="#">Shop</a>
+                <a href="#">Work With Me</a>
+                <a href="about.html">About</a> </nav>
+            <div class="nav-icons">
+                <span class="lang-switcher">[EN/HE]</span>
+                <a href="#">🛒</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>Meet R.N Aml Abu Attaya</h1>
+                <p>Your guide for the incredible journey of motherhood.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-image">
+                    <img src="pics/aml.jpg" alt="Nurse Aml Abu Attaya">
+                </div>
+                <div class="about-text">
+                    <h2>My Journey to Mama is Ready</h2>
+                    <p>
+                        Hello, I'm Aml, a Registered Nurse with a passion for supporting new and expecting mothers. My journey into maternal and child health began X years ago when [brief personal story/inspiration]. I've witnessed firsthand the challenges and triumphs of new parenthood, and it inspired me to create Mama is Ready – a place where you can find trusted, empathetic guidance.
+                    </p>
+                    <p>
+                        My expertise spans [mention 2-3 key areas, e.g., postpartum recovery, newborn care, breastfeeding support]. I believe every mother deserves personalized, evidence-based care, delivered with understanding and compassion. I'm here to empower you with knowledge and confidence, making your transition into motherhood as smooth and joyful as possible.
+                    </p>
+                    <p>
+                        Outside of my work, I enjoy [mention a hobby or personal detail, e.g., spending time with my own family, reading, enjoying nature]. I look forward to connecting with you and being a part of your incredible journey!
+                    </p>
+                    <a href="mailto:your.email@example.com" class="btn">Connect with Aml</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Mama is Ready, R.N Aml Abu Attaya. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a> | 
+                <a href="#">Facebook</a> | 
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama is Ready - Nurse Aml Abu Attaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* --- Global Styles & Variables --- */
+        :root {
+            --primary-color: #000000; /* Black from logo */
+            --secondary-color: #F7E5E9; /* Soft pink from logo background */
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --background-light: #F9F7F5; /* A very light, almost white background */
+            --font-heading: 'Great Vibes', cursive; /* To complement logo script */
+            --font-body: 'Lato', sans-serif;
+            --font-subheading: 'Playfair Display', serif; /* For secondary headings */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-subheading); /* Use Playfair for readability in headings */
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-family: var(--font-body);
+        }
+
+        .btn:hover {
+            background-color: #333333;
+        }
+
+        /* --- Header & Navigation --- */
+        .header {
+            padding: 0.75rem 0; /* Slightly reduce padding */
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 70px; /* <<< CHANGED FROM 50px to 70px */
+            width: auto;
+        }
+        
+        .nav a {
+            margin: 0 1rem;
+            font-weight: 700;
+            color: var(--text-dark); /* Ensure navigation links are dark */
+        }
+
+        .nav-icons a {
+            margin-left: 1rem;
+        }
+        
+        .lang-switcher {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-color: #000000; /* Fallback to ensure contrast if image fails */
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1546015593-627c102c9f13?q=80&w=2070'); /* Keep a relevant image */
+            background-size: cover;
+            background-position: center 30%;
+            color: var(--text-light);
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-family: var(--font-subheading); /* For strong readability */
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* --- Pillars Section --- */
+        .pillars {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: var(--background-light); /* Light background for contrast */
+        }
+
+        .pillars h2 {
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .pillars-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .pillar {
+            background: #fff; /* White background for individual cards */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Soft shadow */
+            flex: 1; /* Allows columns to grow */
+            max-width: 350px; /* Limit width on larger screens */
+        }
+        
+        .pillar img {
+            width: 70px; /* Consistent size for icons */
+            height: 70px; /* Consistent size for icons */
+            margin-bottom: 1rem;
+        }
+
+        .pillar h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Lead Magnet Section --- */
+        .lead-magnet {
+            background-color: var(--secondary-color); /* Pink from logo */
+            padding: 4rem 0;
+            color: var(--text-dark); /* Text should be dark for contrast on pink */
+        }
+
+        .lead-magnet .container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .lead-magnet-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color); /* Black heading on pink */
+            margin-bottom: 1rem;
+        }
+        
+        .lead-magnet-form input {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .lead-magnet-form .btn {
+            width: 100%;
+            background: var(--primary-color); /* Black button on pink */
+            color: var(--text-light);
+        }
+
+        .lead-magnet-image {
+            flex-basis: 40%;
+            min-width: 250px;
+        }
+        
+        .lead-magnet-image img {
+            border: 5px solid white;
+            border-radius: 5px;
+        }
+
+        /* --- Featured Products --- */
+        .featured-products {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #FFFFFF; /* White background */
+        }
+        
+        .featured-products h2 {
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .products-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+        
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-basis: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            background: #fff;
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+        }
+        
+        .product-info .price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0.5rem 0 1rem 0;
+        }
+        
+        /* --- Footer --- */
+        .footer {
+            background: var(--primary-color); /* Black footer */
+            color: #ccc;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 1rem;
+        }
+        
+        .footer .social-links a {
+            margin: 0 0.5rem;
+            color: var(--secondary-color); /* Pink social links */
+            font-size: 1.2rem;
+        }
+
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .nav {
+                display: none; /* Simple hiding for prototype on mobile */
+            }
+            .header .container {
+                justify-content: center; /* Center logo if nav is hidden */
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .pillars-grid {
+                flex-direction: column;
+                align-items: center; /* Center single column */
+            }
+            .pillar {
+                width: 90%; /* Make pillars take more width */
+                max-width: 400px;
+            }
+            
+            .lead-magnet .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .lead-magnet-image {
+                order: -1; /* Image above text on mobile */
+            }
+
+            .products-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-card {
+                width: 90%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="pics/logo.jpg" alt="Mama is Ready Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#">Learn</a>
+                <a href="#">Shop</a>
+                <a href="#">Work With Me</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div class="nav-icons">
+                <span class="lang-switcher">[EN/HE]</span>
+                <a href="#">🛒</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Guidance You Can Trust, For The Journey That Matters Most.</h1>
+                <p>Expert advice from R.N Aml Abu Attaya, from your first trimester to your toddler's first steps.</p>
+                <a href="#" class="btn">Explore My Guides</a>
+            </div>
+        </section>
+
+        <section class="pillars">
+            <div class="container">
+                <div class="pillars-grid">
+                    <div class="pillar">
+                        <img src="icons/book.jpg" alt="Learn Icon">
+                        <h3>LEARN</h3>
+                        <p>Evidence-based articles and guides to answer your biggest questions.</p>
+                        <a href="#">Read the Blog &rarr;</a>
+                    </div>
+                    <div class="pillar">
+                        <img src="icons/shop.jpg" alt="Shop Icon">
+                        <h3>SHOP</h3>
+                        <p>My personally curated collection of nurse-approved products for mom and baby.</p>
+                        <a href="#">Browse the Shop &rarr;</a>
+                    </div>
+                    <div class="pillar">
+                        <img src="icons/consult.jpg" alt="Consult Icon">
+                        <h3>CONSULT</h3>
+                        <p>Book a private, one-on-one session with R.N Aml Abu Attaya for personalized support.</p>
+                        <a href="#">View Services &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lead-magnet">
+            <div class="container">
+                <div class="lead-magnet-image">
+                     <img src="https://placehold.co/600x400/FFFFFF/333333?text=Checklist+PDF" alt="Mockup of a checklist PDF">
+                </div>
+                <div class="lead-magnet-text">
+                    <h2>FREE DOWNLOAD: The Ultimate Hospital Bag Checklist.</h2>
+                    <p>Forget the stress. Get my expert list of exactly what you need (and what you don't) for a smoother delivery day.</p>
+                    <form class="lead-magnet-form">
+                        <input type="text" placeholder="Your First Name">
+                        <input type="email" placeholder="Your Email Address">
+                        <button type="submit" class="btn">Send Me the Checklist!</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section class="featured-products">
+            <div class="container">
+                <h2>Shop My Most Recommended Kits</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://placehold.co/300x250/F9F7F5/333333?text=Recovery+Kit" alt="Postpartum Recovery Kit">
+                        <div class="product-info">
+                            <h3>Fourth Trimester Recovery Kit</h3>
+                            <p class="price">₪320</p>
+                            <a href="#" class="btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://placehold.co/300x250/F9F7F5/333333?text=Sleep+Kit" alt="Peaceful Sleep Kit">
+                        <div class="product-info">
+                            <h3>Peaceful Sleep Starter Kit</h3>
+                            <p class="price">₪280</p>
+                            <a href="#" class="btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://placehold.co/300x250/F9F7F5/333333?text=Skincare+Set" alt="Newborn Skincare Set">
+                        <div class="product-info">
+                            <h3>Newborn Skincare Set</h3>
+                            <p class="price">₪190</p>
+                            <a href="#" class="btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Mama is Ready, R.N Aml Abu Attaya. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a> | 
+                <a href="#">Facebook</a> | 
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
