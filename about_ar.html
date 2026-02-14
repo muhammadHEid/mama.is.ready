@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عني - الممرضة أمل أبو عطايا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <style>
+        /* --- Global Styles & Variables (Copied from index.html for consistency) --- */
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #F7E5E9;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --background-light: #F9F7F5;
+            --font-heading: 'Great Vibes', cursive;
+            --font-body: 'Cairo', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-body);
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-family: var(--font-body);
+        }
+
+        .btn:hover {
+            background-color: #333333;
+        }
+
+        /* --- Header & Navigation (Copied for consistency) --- */
+        .header {
+            padding: 0.75rem 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+        }
+
+        .nav a {
+            margin: 0 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .nav-icons a {
+            margin-right: 1rem;
+        }
+
+        .lang-switcher {
+            font-size: 0.9rem;
+            color: #777;
+            font-family: sans-serif;
+        }
+
+        /* --- About Page Specific Styles --- */
+        .about-hero {
+            background-color: var(--secondary-color);
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-content {
+            padding: 4rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .about-image {
+            flex-basis: 40%;
+            max-width: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .about-text {
+            flex-basis: 60%;
+            max-width: 700px;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* --- Footer (Copied for consistency) --- */
+        .footer {
+            background: var(--primary-color);
+            color: #ccc;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer .social-links a {
+            margin: 0 0.5rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        /* --- Responsive Design --- */
+        @media (min-width: 768px) {
+            .about-content {
+                flex-direction: row;
+                text-align: right;
+                /* RTL alignment */
+            }
+
+            .about-image {
+                margin-left: 3rem;
+                /* Adjusted for RTL */
+                margin-right: 0;
+            }
+
+            .about-text h2 {
+                text-align: right;
+                /* RTL alignment */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="pics/logo.jpg" alt="Mama is Ready Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="index_ar.html">الرئيسية</a>
+                <a href="#">تعلمي</a>
+                <a href="#">المتجر</a>
+                <a href="vlogs_ar.html">يومياتي</a>
+                <a href="consult_ar.html">استشارات</a>
+                <a href="about_ar.html">عني</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="about.html" class="lang-switcher">EN</a>
+                <span class="lang-switcher">/</span>
+                <span class="lang-switcher" style="font-weight: bold; color: #000;">HE</span>
+                <a href="#">🛒</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>قابلوا الممرضة أمل أبو عطايا</h1>
+                <p>دليلك لرحلة الأمومة المذهلة.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-image">
+                    <img src="pics/aml.jpg" alt="Nurse Aml Abu Attaya">
+                </div>
+                <div class="about-text">
+                    <h2>رحلتي إلى Mama is Ready</h2>
+                    <p>
+                        مرحبًا، أنا أمل، ممرضة مسجلة ولدي شغف بدعم الأمهات الجدد والحوامل. بدأت رحلتي في صحة الأم والطفل
+                        منذ عدة سنوات. لقد شهدت بنفسي التحديات والانتصارات التي تصاحب الأمومة الجديدة، وهذا ما ألهمني
+                        لإنشاء Mama is Ready - مكان يمكنك أن تجدي فيه إرشادًا موثوقًا ومتعاطفًا.
+                    </p>
+                    <p>
+                        تغطي خبرتي [اذكري 2-3 مجالات رئيسية، مثل: التعافي بعد الولادة، رعاية المولود الجديد، دعم الرضاعة
+                        الطبيعية]. أؤمن بأن كل أم تستحق رعاية مخصصة ومبنية على الأدلة، تُقدم بتفهم وتعاطف. أنا هنا
+                        لتمكينك بالمعرفة والثقة، لجعل انتقالك إلى الأمومة سلسًا وسعيدًا قدر الإمكان.
+                    </p>
+                    <p>
+                        خارج عملي، أستمتع بـ [اذكري هواية أو تفصيل شخصي]. أتطلع للتواصل معك وأن أكون جزءًا من رحلتك
+                        المذهلة!
+                    </p>
+                    <a href="consult_ar.html" class="btn">تواصلي مع أمل</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Mama is Ready, الممرضة أمل أبو عطايا. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/mama.is.ready?igsh=dmlwZmh6em1vajIz" target="_blank">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
