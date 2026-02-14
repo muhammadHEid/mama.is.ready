@@ -177,49 +177,21 @@
 
         .vlog-thumbnail {
             position: relative;
-            padding-top: 100%;
-            /* 1:1 Aspect Ratio for Instagram feel */
+            padding-top: 177.77%;
+            /* 16:9 Aspect Ratio for Reels */
             overflow: hidden;
             background-color: #eee;
         }
 
-        .vlog-thumbnail img {
+        .vlog-thumbnail iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
         }
 
-        .vlog-card:hover .vlog-thumbnail img {
-            transform: scale(1.05);
-        }
-
-        .play-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .play-icon::before {
-            content: '';
-            border-style: solid;
-            border-width: 10px 0 10px 18px;
-            border-color: transparent transparent transparent var(--primary-color);
-            margin-left: 4px;
-            /* Optical adjustment */
-        }
 
         .vlog-content {
             padding: 1.5rem;
@@ -325,12 +297,10 @@
                 <div class="vlog-grid">
                     <!-- Vlog Item 1 -->
                     <article class="vlog-card">
-                        <a href="https://www.instagram.com/reel/DUtW5WWjbAT/?igsh=MXc4ZTJobHZ4eXEycg=="
-                            class="vlog-thumbnail" target="_blank">
-                            <img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?q=80&w=800"
-                                alt="Morning Routine">
-                            <div class="play-icon"></div>
-                        </a>
+                        <div class="vlog-thumbnail">
+                            <iframe src="https://www.instagram.com/reel/DUtW5WWjbAT/embed" frameborder="0"
+                                scrolling="no" allowtransparency="true"></iframe>
+                        </div>
                         <div class="vlog-content">
                             <span class="vlog-date">Today</span>
                             <h3 class="vlog-title">Morning Routine with a Newborn</h3>
@@ -346,12 +316,10 @@
 
                     <!-- Vlog Item 2 -->
                     <article class="vlog-card">
-                        <a href="https://www.instagram.com/reel/DUgZXfujRHi/?igsh=bmQ2bW5tMXRqeWc1"
-                            class="vlog-thumbnail" target="_blank">
-                            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=800"
-                                alt="Hospital Bag Tips">
-                            <div class="play-icon"></div>
-                        </a>
+                        <div class="vlog-thumbnail">
+                            <iframe src="https://www.instagram.com/reel/DUgZXfujRHi/embed" frameborder="0"
+                                scrolling="no" allowtransparency="true"></iframe>
+                        </div>
                         <div class="vlog-content">
                             <span class="vlog-date">Yesterday</span>
                             <h3 class="vlog-title">What's REALLY in My Hospital Bag?</h3>
@@ -366,12 +334,10 @@
 
                     <!-- Vlog Item 3 -->
                     <article class="vlog-card">
-                        <a href="https://www.instagram.com/reel/DUdmecFjaYT/?igsh=MWI3YnJydjdjOG5xaQ=="
-                            class="vlog-thumbnail" target="_blank">
-                            <img src="https://images.unsplash.com/photo-1595152452543-e5caa28bf7a0?q=80&w=800"
-                                alt="Breastfeeding Q&A">
-                            <div class="play-icon"></div>
-                        </a>
+                        <div class="vlog-thumbnail">
+                            <iframe src="https://www.instagram.com/reel/DUdmecFjaYT/embed" frameborder="0"
+                                scrolling="no" allowtransparency="true"></iframe>
+                        </div>
                         <div class="vlog-content">
                             <span class="vlog-date">2 Days Ago</span>
                             <h3 class="vlog-title">Breastfeeding Q&A: Common Struggles</h3>
@@ -394,7 +360,7 @@
         <div class="container">
             <p>© 2025 Mama is Ready, R.N Aml Abu Attaya. All Rights Reserved.</p>
             <div class="social-links">
-                <a href="#">Instagram</a> |
+                <a href="https://www.instagram.com/mama.is.ready?igsh=dmlwZmh6em1vajIz" target="_blank">Instagram</a> |
                 <a href="#">Facebook</a> |
                 <a href="#">WhatsApp</a>
             </div>

@@ -80,6 +80,19 @@
 
         .btn:hover {
             background-color: #333333;
+            color: #ffffff;
+            /* Ensure text remains white */
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #ffffff;
+            color: #000000;
         }
 
         /* --- Header & Navigation --- */
@@ -313,8 +326,12 @@
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
             .nav {
-                display: none;
-                /* Simple hiding for prototype on mobile */
+                /* display: none; Removed to show links on mobile */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-top: 1rem;
             }
 
             .header .container {
@@ -361,6 +378,16 @@
                 width: 90%;
                 max-width: 350px;
             }
+
+            .hero .btn {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -393,6 +420,7 @@
                 <h1>Guidance You Can Trust, For The Journey That Matters Most.</h1>
                 <p>Expert advice from R.N Aml Abu Attaya, from your first trimester to your toddler's first steps.</p>
                 <a href="#" class="btn">Explore My Guides</a>
+                <a href="vlogs.html" class="btn btn-secondary">Watch Daily Vlogs</a>
             </div>
         </section>
 
@@ -474,13 +502,37 @@
             </div>
         </section>
 
+        <section class="latest-vlogs" style="padding: 4rem 0; background-color: #fce4ec; text-align: center;">
+            <div class="container">
+                <h2>Daily Vlogs on Instagram</h2>
+                <p style="margin-bottom: 2rem;">Catch up on my latest tips, Q&As, and daily life updates.</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <a href="vlogs.html"
+                        style="display: block; width: 300px; height: 300px; background: url('https://images.unsplash.com/photo-1519834785169-98be25ec3f84?q=80&w=800') center/cover; border-radius: 12px; position: relative; text-decoration: none;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 10px;">
+                            Morning Routine</div>
+                    </a>
+                    <a href="vlogs.html"
+                        style="display: block; width: 300px; height: 300px; background: url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=800') center/cover; border-radius: 12px; position: relative; text-decoration: none;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 10px;">
+                            Hospital Bag</div>
+                    </a>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="vlogs.html" class="btn">View All Vlogs</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
         <div class="container">
             <p>© 2025 Mama is Ready, R.N Aml Abu Attaya. All Rights Reserved.</p>
             <div class="social-links">
-                <a href="#">Instagram</a> |
+                <a href="https://www.instagram.com/mama.is.ready?igsh=dmlwZmh6em1vajIz" target="_blank">Instagram</a> |
                 <a href="#">Facebook</a> |
                 <a href="#">WhatsApp</a>
             </div>
