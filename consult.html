@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation - Mama is Ready</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <style>
+        /* --- Global Styles & Variables (Consistent with index.html) --- */
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #F7E5E9;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --background-light: #F9F7F5;
+            --font-heading: 'Great Vibes', cursive;
+            --font-body: 'Lato', sans-serif;
+            --font-subheading: 'Playfair Display', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-subheading);
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-family: var(--font-body);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #333333;
+        }
+
+        /* --- Header & Navigation --- */
+        .header {
+            padding: 0.75rem 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+        }
+
+        .nav a {
+            margin: 0 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        /* Underline effect from vlogs.html */
+        .nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-icons a {
+            margin-left: 1rem;
+        }
+
+        /* --- Consult Hero Section --- */
+        .page-hero {
+            background-color: var(--secondary-color);
+            padding: 5rem 0;
+            text-align: center;
+            background-image: url('icons/consult.jpg');
+            /* Optional: Add faint background pattern if available */
+            background-size: 100px;
+            background-blend-mode: overlay;
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* --- Services Section --- */
+        .services-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .services-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background: var(--background-light);
+            padding: 2rem;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            text-align: left;
+            margin: 1rem 0 2rem 1rem;
+            list-style-type: disc;
+        }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Booking Form Section --- */
+        .booking-section {
+            padding: 4rem 0;
+            background-color: var(--background-light);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background: var(--primary-color);
+            color: #ccc;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer .social-links a {
+            margin: 0 0.5rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-top: 1rem;
+            }
+
+            .header .container {
+                justify-content: center;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="pics/logo.jpg" alt="Mama is Ready Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="#">Learn</a>
+                <a href="#">Shop</a>
+                <a href="vlogs.html">Daily Vlogs</a>
+                <a href="consult.html">Work With Me</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div class="nav-icons">
+                <span class="lang-switcher">[EN/HE]</span>
+                <a href="#">🛒</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Work With Me</h1>
+                <p>Personalized guidance for your unique journey. Let's navigate motherhood together.</p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Prenatal Consultation</h3>
+                        <p>Prepare for your delivery with confidence.</p>
+                        <ul>
+                            <li>Hospital Bag Planning</li>
+                            <li>Birth Plan Creation</li>
+                            <li>Newborn Preparation</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Postpartum Support</h3>
+                        <p>Guidance for the "Fourth Trimester".</p>
+                        <ul>
+                            <li>Recovery Tips</li>
+                            <li>Breastfeeding Support</li>
+                            <li>Emotional Wellness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section" id="book">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Book a Consultation</h2>
+                    <p style="text-align: center; margin-bottom: 2rem; color: #666;">Fill out the form below to request
+                        a session. I will get back to you shortly to confirm the details.</p>
+
+                    <form action="mailto:Aml97.ay@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone_number" placeholder="+972 50 123 4567" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Interested Service (Optional)</label>
+                            <select id="service" name="service_type">
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="Prenatal Consultation">Prenatal Consultation</option>
+                                <option value="Postpartum Support">Postpartum Support</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message"
+                                placeholder="Tell me a bit about what you need help with..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%;">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Mama is Ready, R.N Aml Abu Attaya. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/mama.is.ready?igsh=dmlwZmh6em1vajIz" target="_blank">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
